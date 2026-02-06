@@ -152,7 +152,6 @@ check_result("19112 + 17767 + 1", expected_sum, actual_sum);
 //all_propagate() phải trả về 1
 if(all_propagate(a, b)) begin
 check_result("skip o block1 va block3", expected_sum, actual_sum);
-$display("Delay = %0t ns", end_t - start_t);
 end else begin
 $display("Khong co block nao skip, khong nhu mong doi");
 end
@@ -206,4 +205,5 @@ $display("Coverage = %0.2f%%", cp.get_coverage());
 $stop;
 end
 endmodule
+
 
