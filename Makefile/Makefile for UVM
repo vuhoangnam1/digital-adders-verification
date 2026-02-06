@@ -1,0 +1,6 @@
+vsim -voptargs="+acc=2" work.csa_tb
+vsim -coverage -gui work.csa_tb
+run -all
+coverage report -summary
+coverage report -codeAll -details
+coverage report -cvg -verbose
