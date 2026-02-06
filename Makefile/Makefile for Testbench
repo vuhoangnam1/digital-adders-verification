@@ -1,1 +1,17 @@
 vsim -voptargs="+acc=2" work.tb_csa_16bit
+add wave  \
+sim:/tb_csa_16bit/dut_rx/a \
+sim:/tb_csa_16bit/dut_rx/b \
+sim:/tb_csa_16bit/dut_rx/C_i \
+sim:/tb_csa_16bit/dut_tx/S \
+sim:/tb_csa_16bit/dut_tx/C_o \
+sim:/tb_csa_16bit/dut_rx/clk \
+sim:/tb_csa_16bit/dut_rx/expected_sum \
+sim:/tb_csa_16bit/dut_rx/actual_sum \
+sim:/tb_csa_16bit/dut_tx/block \
+sim:/tb_csa_16bit/dut_tx/skip \
+vsim -coverage -gui work.tb_csa_16bit
+run -all
+coverage report -summary
+coverage report -codeAll -details
+coverage report -cvg -verbose
