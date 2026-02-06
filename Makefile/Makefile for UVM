@@ -1,4 +1,11 @@
 vsim -voptargs="+acc=2" work.csa_tb
+add wave  \
+sim:/csa_tb/csa_if/clk \
+sim:/csa_tb/csa_if/a \
+sim:/csa_tb/csa_if/b \
+sim:/csa_tb/csa_if/C_i \
+sim:/csa_tb/csa_if/S \
+sim:/csa_tb/csa_if/C_o \
 vsim -coverage -gui work.csa_tb
 run -all
 coverage report -summary
