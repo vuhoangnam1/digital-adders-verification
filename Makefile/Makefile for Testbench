@@ -1,0 +1,1 @@
+vsim -voptargs="+acc=2" work.tb_csa_16bit
